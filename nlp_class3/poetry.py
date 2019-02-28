@@ -78,7 +78,7 @@ print('Shape of data tensor:', input_sequences.shape)
 # load in pre-trained word vectors
 print('Loading word vectors...')
 word2vec = {}
-with open(os.path.join('../large_files/glove.6B/glove.6B.%sd.txt' % EMBEDDING_DIM)) as f:
+with open(os.path.join('../../data/glove.6B/glove.6B.%sd.txt' % EMBEDDING_DIM)) as f:
   # is just a space-separated text file in the format:
   # word vec[0] vec[1] vec[2] ...
   for line in f:

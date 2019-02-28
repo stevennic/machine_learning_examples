@@ -67,7 +67,7 @@ def get_data(split_sequences=False):
 #     tag_idx = 0
 #     Xtrain = []
 #     Ytrain = []
-#     for line in open('../large_files/aij-wikiner-en-wp3'):
+#     for line in open('../../data/aij-wikiner-en-wp3'):
 #         # each line is a full sentence
 #         currentX = []
 #         currentY = []

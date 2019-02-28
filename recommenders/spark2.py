@@ -18,8 +18,8 @@ sc = SparkContext("local", "Your App Name Here")
 
 
 # load in the data
-# data = sc.textFile("../large_files/movielens-20m-dataset/small_rating.csv")
-data = sc.textFile("../large_files/movielens-20m-dataset/rating.csv.gz")
+# data = sc.textFile("../../data/movielens-20m-dataset/small_rating.csv")
+data = sc.textFile("../../data/movielens-20m-dataset/rating.csv.gz")
 
 # filter out header
 header = data.first() #extract header

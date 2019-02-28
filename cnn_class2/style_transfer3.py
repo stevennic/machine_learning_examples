@@ -45,7 +45,7 @@ def load_img_and_preprocess(path, shape=None):
 
 
 content_img = load_img_and_preprocess(
-  # '../large_files/caltech101/101_ObjectCategories/elephant/image_0002.jpg',
+  # '../../data/caltech101/101_ObjectCategories/elephant/image_0002.jpg',
   # 'batman.jpg',
   'content/sydney.jpg',
   # (225, 300),

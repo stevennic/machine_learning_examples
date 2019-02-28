@@ -36,11 +36,11 @@ def image2array(im):
 
 def getImageData():
     N = 50000
-    savedXpath = '../large_files/cifar10/train_all.npy'
+    savedXpath = '../../data/cifar10/train_all.npy'
     if not os.path.exists(savedXpath):
         X = np.zeros((N, 3, 32, 32))
         for i in xrange(N):
-            im = Image.open("../large_files/cifar10/train/%s.png" % (i + 1))
+            im = Image.open("../../data/cifar10/train/%s.png" % (i + 1))
             X[i] = image2array(im)
             if i % 1000 == 0:
                 print i
@@ -51,7 +51,7 @@ def getImageData():
 
     # load labels
     Y = np.zeros(N)
-    df = pd.read_csv('../large_files/cifar10/trainLabels.csv')
+    df = pd.read_csv('../../data/cifar10/trainLabels.csv')
     S = df['label'].tolist()
     idx = 0
     label2idx = {}

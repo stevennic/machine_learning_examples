@@ -54,7 +54,7 @@ target_texts_inputs = [] # sentence in target language offset by 1
 # load in the data
 # download the data at: http://www.manythings.org/anki/
 t = 0
-for line in open('../large_files/translation/spa.txt'):
+for line in open('../../data/translation/spa.txt'):
   # only keep a limited number of samples
   t += 1
   if t > NUM_SAMPLES:
@@ -135,7 +135,7 @@ decoder_targets = pad_sequences(target_sequences, maxlen=max_len_target, padding
 # store all the pre-trained word vectors
 print('Loading word vectors...')
 word2vec = {}
-with open(os.path.join('../large_files/glove.6B/glove.6B.%sd.txt' % EMBEDDING_DIM)) as f:
+with open(os.path.join('../../data/glove.6B/glove.6B.%sd.txt' % EMBEDDING_DIM)) as f:
   # is just a space-separated text file in the format:
   # word vec[0] vec[1] vec[2] ...
   for line in f:

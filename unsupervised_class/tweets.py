@@ -59,7 +59,7 @@ def filter_tweet(s):
 
 
 ### load data ###
-df = pd.read_csv('../large_files/tweets.csv')
+df = pd.read_csv('../../data/tweets.csv')
 text = df.text.tolist()
 text = [filter_tweet(s) for s in text]
 

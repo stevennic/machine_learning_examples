@@ -13,7 +13,7 @@ from sklearn.utils import shuffle
 
 # load in the data
 # https://www.kaggle.com/grouplens/movielens-20m-dataset
-df = pd.read_csv('../large_files/movielens-20m-dataset/very_small_rating.csv')
+df = pd.read_csv('../../data/movielens-20m-dataset/very_small_rating.csv')
 
 N = df.userId.max() + 1 # number of users
 M = df.movie_idx.max() + 1 # number of movies

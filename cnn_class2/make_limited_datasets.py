@@ -10,7 +10,7 @@ def link(src, dst):
   if not os.path.exists(dst):
     os.symlink(src, dst, target_is_directory=True)
 
-mkdir('../large_files/fruits-360-small')
+mkdir('../../data/fruits-360-small')
 
 
 classes = [
@@ -24,11 +24,11 @@ classes = [
   'Raspberry'
 ]
 
-train_path_from = os.path.abspath('../large_files/fruits-360/Training')
-valid_path_from = os.path.abspath('../large_files/fruits-360/Validation')
+train_path_from = os.path.abspath('../../data/fruits-360/Training')
+valid_path_from = os.path.abspath('../../data/fruits-360/Validation')
 
-train_path_to = os.path.abspath('../large_files/fruits-360-small/Training')
-valid_path_to = os.path.abspath('../large_files/fruits-360-small/Validation')
+train_path_to = os.path.abspath('../../data/fruits-360-small/Training')
+valid_path_to = os.path.abspath('../../data/fruits-360-small/Validation')
 
 mkdir(train_path_to)
 mkdir(valid_path_to)

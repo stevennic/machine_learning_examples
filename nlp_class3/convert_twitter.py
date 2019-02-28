@@ -7,10 +7,10 @@ from builtins import range, input
 
 # each output line should be:
 # INPUT<tab>RESPONSE
-with open('../large_files/twitter_tab_format.txt', 'w') as f:
+with open('../../data/twitter_tab_format.txt', 'w') as f:
   prev_line = None
   # data source: https://github.com/Phylliida/Dialogue-Datasets
-  for line in open('../large_files/TwitterLowerAsciiCorpus.txt'):
+  for line in open('../../data/TwitterLowerAsciiCorpus.txt'):
     line = line.rstrip()
 
     if prev_line and line:

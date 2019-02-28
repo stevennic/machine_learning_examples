@@ -67,7 +67,7 @@ class DataTransformer:
 
 def get_data():
   # regex allows arbitrary number of spaces in separator
-  df = pd.read_csv('../large_files/housing.data', header=None, sep=r"\s*", engine='python')
+  df = pd.read_csv('../../data/housing.data', header=None, sep=r"\s*", engine='python')
   df.columns = [
     'crim', # numerical
     'zn', # numerical

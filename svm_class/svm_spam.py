@@ -18,7 +18,7 @@ from wordcloud import WordCloud
 # file contains some invalid chars
 # depending on which version of pandas you have
 # an error may be thrown
-df = pd.read_csv('../large_files/spam.csv', encoding='ISO-8859-1')
+df = pd.read_csv('../../data/spam.csv', encoding='ISO-8859-1')
 
 # drop unnecessary columns
 df = df.drop(["Unnamed: 2", "Unnamed: 3", "Unnamed: 4"], axis=1)

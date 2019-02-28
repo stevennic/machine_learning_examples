@@ -46,7 +46,7 @@ else:
 
 def get_wiki():
   V = 20000
-  files = glob('../large_files/enwiki*.txt')
+  files = glob('../../data/enwiki*.txt')
   all_word_counts = {}
   for f in files:
     for line in open(f):

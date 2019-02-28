@@ -19,7 +19,7 @@ import pandas as pd
 
 # load the data
 # important note: this is where we will usually put data files
-df = pd.read_csv('../large_files/airfoil_self_noise.dat', sep='\t', header=None)
+df = pd.read_csv('../../data/airfoil_self_noise.dat', sep='\t', header=None)
 
 # check the data
 df.head()

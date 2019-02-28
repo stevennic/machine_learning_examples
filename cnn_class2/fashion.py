@@ -25,7 +25,7 @@ def y2indicator(Y):
 
 # get the data
 # https://www.kaggle.com/zalando-research/fashionmnist
-data = pd.read_csv('../large_files/fashionmnist/fashion-mnist_train.csv')
+data = pd.read_csv('../../data/fashionmnist/fashion-mnist_train.csv')
 data = data.values
 np.random.shuffle(data)
 

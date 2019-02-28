@@ -48,15 +48,15 @@ def flatten(X):
 
 
 def get_data():
-    if not os.path.exists('../large_files/train_32x32.mat'):
-        print('Looking for ../large_files/train_32x32.mat')
+    if not os.path.exists('../../data/train_32x32.mat'):
+        print('Looking for ../../data/train_32x32.mat')
         print('You have not downloaded the data and/or not placed the files in the correct location.')
         print('Please get the data from: http://ufldl.stanford.edu/housenumbers')
         print('Place train_32x32.mat and test_32x32.mat in the folder large_files adjacent to the class folder')
         exit()
 
-    train = loadmat('../large_files/train_32x32.mat')
-    test  = loadmat('../large_files/test_32x32.mat')
+    train = loadmat('../../data/train_32x32.mat')
+    test  = loadmat('../../data/test_32x32.mat')
     return train, test
 
 

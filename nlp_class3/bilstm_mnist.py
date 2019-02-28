@@ -21,13 +21,13 @@ if len(K.tensorflow_backend._get_available_gpus()) > 0:
 def get_mnist(limit=None):
   if not os.path.exists('../large_files'):
     print("You must create a folder called large_files adjacent to the class folder first.")
-  if not os.path.exists('../large_files/train.csv'):
+  if not os.path.exists('../../data/train.csv'):
     print("Looks like you haven't downloaded the data or it's not in the right spot.")
     print("Please get train.csv from https://www.kaggle.com/c/digit-recognizer")
     print("and place it in the large_files folder.")
 
   print("Reading in and transforming data...")
-  df = pd.read_csv('../large_files/train.csv')
+  df = pd.read_csv('../../data/train.csv')
   data = df.values
   np.random.shuffle(data)
   X = data[:, 1:].reshape(-1, 28, 28) / 255.0 # data is from 0..255

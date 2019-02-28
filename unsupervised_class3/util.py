@@ -20,13 +20,13 @@ from sklearn.utils import shuffle
 def get_mnist(limit=None):
   if not os.path.exists('../large_files'):
     print("You must create a folder called large_files adjacent to the class folder first.")
-  if not os.path.exists('../large_files/train.csv'):
+  if not os.path.exists('../../data/train.csv'):
     print("Looks like you haven't downloaded the data or it's not in the right spot.")
     print("Please get train.csv from https://www.kaggle.com/c/digit-recognizer")
     print("and place it in the large_files folder.")
 
   print("Reading in and transforming data...")
-  df = pd.read_csv('../large_files/train.csv')
+  df = pd.read_csv('../../data/train.csv')
   data = df.values
   # np.random.shuffle(data)
   X = data[:, 1:] / 255.0 # data is from 0..255
@@ -42,43 +42,43 @@ def get_celeb(limit=None):
     os.mkdir('../large_files')
 
   # eventual place where our final data will reside
-  if not os.path.exists('../large_files/img_align_celeba-cropped'):
+  if not os.path.exists('../../data/img_align_celeba-cropped'):
 
     # check for original data
-    if not os.path.exists('../large_files/img_align_celeba'):
+    if not os.path.exists('../../data/img_align_celeba'):
       # download the file and place it here
-      if not os.path.exists('../large_files/img_align_celeba.zip'):
+      if not os.path.exists('../../data/img_align_celeba.zip'):
         print("Downloading img_align_celeba.zip...")
         download_file(
           '0B7EVK8r0v71pZjFTYXZWM3FlRnM',
-          '../large_files/img_align_celeba.zip'
+          '../../data/img_align_celeba.zip'
         )
 
       # unzip the file
       print("Extracting img_align_celeba.zip...")
-      with zipfile.ZipFile('../large_files/img_align_celeba.zip') as zf:
+      with zipfile.ZipFile('../../data/img_align_celeba.zip') as zf:
         zip_dir = zf.namelist()[0]
         zf.extractall('../large_files')
 
 
     # load in the original images
-    filenames = glob("../large_files/img_align_celeba/*.jpg")
+    filenames = glob("../../data/img_align_celeba/*.jpg")
     N = len(filenames)
     print("Found %d files!" % N)
 
 
     # crop the images to 64x64
-    os.mkdir('../large_files/img_align_celeba-cropped')
+    os.mkdir('../../data/img_align_celeba-cropped')
     print("Cropping images, please wait...")
 
     for i in range(N):
-      crop_and_resave(filenames[i], '../large_files/img_align_celeba-cropped')
+      crop_and_resave(filenames[i], '../../data/img_align_celeba-cropped')
       if i % 1000 == 0:
         print("%d/%d" % (i, N))
 
 
   # make sure to return the cropped version
-  filenames = glob("../large_files/img_align_celeba-cropped/*.jpg")
+  filenames = glob("../../data/img_align_celeba-cropped/*.jpg")
   return filenames
 
 

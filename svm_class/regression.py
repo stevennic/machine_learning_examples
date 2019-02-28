@@ -15,7 +15,7 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.svm import SVR
 
 # get the data: https://archive.ics.uci.edu/ml/datasets/Concrete+Compressive+Strength
-df = pd.read_excel('../large_files/Concrete_Data.xls')
+df = pd.read_excel('../../data/Concrete_Data.xls')
 df.columns = list(range(df.shape[1]))
 
 X = df[[0,1,2,3,4,5,6,7]].values

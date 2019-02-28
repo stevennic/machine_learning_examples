@@ -89,7 +89,7 @@ def my_tokenizer(s):
     return s.split()
 
 def get_wikipedia_data(n_files, n_vocab, by_paragraph=False):
-    prefix = '../large_files/'
+    prefix = '../../data/'
 
     if not os.path.exists(prefix):
         print("Are you sure you've downloaded, converted, and placed the Wikipedia data into the proper folder?")

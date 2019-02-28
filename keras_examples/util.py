@@ -12,12 +12,12 @@ from scipy.io import loadmat
 
 def getKaggleMNIST():
     # https://www.kaggle.com/c/digit-recognizer
-    return getMNISTFormat('../large_files/train.csv')
+    return getMNISTFormat('../../data/train.csv')
 
 
 def getKaggleFashionMNIST():
     # https://www.kaggle.com/zalando-research/fashionmnist
-    return getMNISTFormat('../large_files/fashionmnist/fashion-mnist_train.csv')
+    return getMNISTFormat('../../data/fashionmnist/fashion-mnist_train.csv')
 
 def getMNISTFormat(path):
     # MNIST data:
@@ -53,7 +53,7 @@ def getCIFAR10():
     # train data
     for i in range(5):
         fn = 'data_batch_%s.mat' % (i+1)
-        d = loadmat('../large_files/cifar-10-batches-mat/' + fn)
+        d = loadmat('../../data/cifar-10-batches-mat/' + fn)
         x = d['data']
         y = d['labels'].flatten()
         x = x.reshape(10000, 3, 32, 32)
@@ -62,7 +62,7 @@ def getCIFAR10():
         Ytrain[i*10000:(i+1)*10000] = y
 
     # test data
-    d = loadmat('../large_files/cifar-10-batches-mat/test_batch.mat')
+    d = loadmat('../../data/cifar-10-batches-mat/test_batch.mat')
     x = d['data']
     y = d['labels'].flatten()
     x = x.reshape(10000, 3, 32, 32)

@@ -8,7 +8,7 @@ from builtins import range, input
 import pandas as pd
 
 # https://www.kaggle.com/grouplens/movielens-20m-dataset
-df = pd.read_csv('../large_files/movielens-20m-dataset/rating.csv')
+df = pd.read_csv('../../data/movielens-20m-dataset/rating.csv')
 
 
 
@@ -38,4 +38,4 @@ df['movie_idx'] = df.apply(lambda row: movie2idx[row.movieId], axis=1)
 
 df = df.drop(columns=['timestamp'])
 
-df.to_csv('../large_files/movielens-20m-dataset/edited_rating.csv', index=False)
+df.to_csv('../../data/movielens-20m-dataset/edited_rating.csv', index=False)

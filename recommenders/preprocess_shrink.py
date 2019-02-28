@@ -12,7 +12,7 @@ from collections import Counter
 
 # load in the data
 # https://www.kaggle.com/grouplens/movielens-20m-dataset
-df = pd.read_csv('../large_files/movielens-20m-dataset/edited_rating.csv')
+df = pd.read_csv('../../data/movielens-20m-dataset/edited_rating.csv')
 print("original dataframe size:", len(df))
 
 N = df.userId.max() + 1 # number of users
@@ -55,4 +55,4 @@ print("max user id:", df_small.userId.max())
 print("max movie id:", df_small.movie_idx.max())
 
 print("small dataframe size:", len(df_small))
-df_small.to_csv('../large_files/movielens-20m-dataset/small_rating.csv', index=False)
+df_small.to_csv('../../data/movielens-20m-dataset/small_rating.csv', index=False)

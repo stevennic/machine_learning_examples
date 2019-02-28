@@ -44,7 +44,7 @@ target_texts = [] # sentence in target language
 # load in the data
 # download the data at: http://www.manythings.org/anki/
 t = 0
-for line in open('../large_files/translation/spa.txt'):
+for line in open('../../data/translation/spa.txt'):
   # only keep a limited number of samples
   t += 1
   if t > NUM_SAMPLES:

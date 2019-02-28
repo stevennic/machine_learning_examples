@@ -12,8 +12,8 @@ from sklearn.utils import shuffle
 from scipy.sparse import lil_matrix, csr_matrix, save_npz, load_npz
 
 # load in the data
-df = pd.read_csv('../large_files/movielens-20m-dataset/edited_rating.csv')
-# df = pd.read_csv('../large_files/movielens-20m-dataset/small_rating.csv')
+df = pd.read_csv('../../data/movielens-20m-dataset/edited_rating.csv')
+# df = pd.read_csv('../../data/movielens-20m-dataset/small_rating.csv')
 
 N = df.userId.max() + 1 # number of users
 M = df.movie_idx.max() + 1 # number of movies

@@ -163,17 +163,17 @@ def get_ptb_data():
     # word2idx mapping, sentences
     # here the sentences should be Tree objects
 
-    if not os.path.exists('../large_files/trees'):
-        print("Please create ../large_files/trees relative to this file.")
+    if not os.path.exists('../../data/trees'):
+        print("Please create ../../data/trees relative to this file.")
         print("train.txt and test.txt should be stored in there.")
         print("Please download the data from http://nlp.stanford.edu/sentiment/")
         exit()
-    elif not os.path.exists('../large_files/trees/train.txt'):
-        print("train.txt is not in ../large_files/trees/train.txt")
+    elif not os.path.exists('../../data/trees/train.txt'):
+        print("train.txt is not in ../../data/trees/train.txt")
         print("Please download the data from http://nlp.stanford.edu/sentiment/")
         exit()
-    elif not os.path.exists('../large_files/trees/test.txt'):
-        print("test.txt is not in ../large_files/trees/test.txt")
+    elif not os.path.exists('../../data/trees/test.txt'):
+        print("test.txt is not in ../../data/trees/test.txt")
         print("Please download the data from http://nlp.stanford.edu/sentiment/")
         exit()
 
@@ -182,7 +182,7 @@ def get_ptb_data():
     test = []
 
     # train set first
-    for line in open('../large_files/trees/train.txt'):
+    for line in open('../../data/trees/train.txt'):
         line = line.rstrip()
         if line:
             t = str2tree(line, word2idx)
@@ -194,7 +194,7 @@ def get_ptb_data():
             # break
 
     # test set
-    for line in open('../large_files/trees/test.txt'):
+    for line in open('../../data/trees/test.txt'):
         line = line.rstrip()
         if line:
             t = str2tree(line, word2idx)

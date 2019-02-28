@@ -48,8 +48,8 @@ def convolve_flatten(X):
 
 
 def main():
-    train = loadmat('../large_files/train_32x32.mat')
-    test  = loadmat('../large_files/test_32x32.mat')
+    train = loadmat('../../data/train_32x32.mat')
+    test  = loadmat('../../data/test_32x32.mat')
 
     # Need to scale! don't leave as 0..255
     # Y is a N x 1 matrix with values 1..10 (MATLAB indexes by 1)

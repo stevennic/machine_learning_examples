@@ -20,7 +20,7 @@ from datetime import datetime
 
 
 # input files
-files = glob('../large_files/enwiki*.txt')
+files = glob('../../data/enwiki*.txt')
 
 
 # unfortunately these work different ways
@@ -110,7 +110,7 @@ if not os.path.exists('pmi_counts_%s.npz' % V):
   ### make PMI matrix
   # add counts
   k = 0
-  # for line in open('../large_files/text8'):
+  # for line in open('../../data/text8'):
   for f in files:
     for line in open(f):
       # don't count headers, structured data, lists, etc...

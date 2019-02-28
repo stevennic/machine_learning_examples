@@ -46,7 +46,7 @@ def download_text8(dst):
 
 def get_text8():
   # download the data if it is not yet in the right place
-  path = '../large_files/text8'
+  path = '../../data/text8'
   if not os.path.exists(path):
     download_text8(path)
 
@@ -65,7 +65,7 @@ def get_text8():
 
 def get_wiki():
   V = 20000
-  files = glob('../large_files/enwiki*.txt')
+  files = glob('../../data/enwiki*.txt')
   all_word_counts = {}
   for f in files:
     for line in open(f):

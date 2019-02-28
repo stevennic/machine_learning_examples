@@ -28,14 +28,14 @@ epochs = 16
 batch_size = 32
 
 # https://www.kaggle.com/paultimothymooney/blood-cells
-train_path = '../large_files/blood_cell_images/TRAIN'
-valid_path = '../large_files/blood_cell_images/TEST'
+train_path = '../../data/blood_cell_images/TRAIN'
+valid_path = '../../data/blood_cell_images/TEST'
 
 # https://www.kaggle.com/moltean/fruits
-# train_path = '../large_files/fruits-360/Training'
-# valid_path = '../large_files/fruits-360/Validation'
-# train_path = '../large_files/fruits-360-small/Training'
-# valid_path = '../large_files/fruits-360-small/Validation'
+# train_path = '../../data/fruits-360/Training'
+# valid_path = '../../data/fruits-360/Validation'
+# train_path = '../../data/fruits-360-small/Training'
+# valid_path = '../../data/fruits-360-small/Validation'
 
 # useful for getting number of files
 image_files = glob(train_path + '/*/*.jp*g')

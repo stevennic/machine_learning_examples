@@ -2,7 +2,7 @@
 # https://www.udemy.com/machine-learning-in-python-random-forest-adaboost
 # mushroom data from:
 # https://archive.ics.uci.edu/ml/datasets/Mushroom
-# put all files in the folder ../large_files/
+# put all files in the folder ../../data/
 from __future__ import print_function, division
 from future.utils import iteritems
 from builtins import range, input
@@ -85,7 +85,7 @@ def replace_missing(df):
 
 
 def get_data():
-  df = pd.read_csv('../large_files/mushroom.data', header=None)
+  df = pd.read_csv('../../data/mushroom.data', header=None)
 
   # replace label column: e/p --> 0/1
   # e = edible = 0, p = poisonous = 1

@@ -37,7 +37,7 @@ EPOCHS = 5
 # get the data at: https://www.kaggle.com/c/sentiment-analysis-on-movie-reviews
 # prepare text samples and their labels
 print('Loading in data...')
-train = pd.read_csv("../large_files/kaggle-sentiment-analysis/train.tsv", sep='\t')
+train = pd.read_csv("../../data/kaggle-sentiment-analysis/train.tsv", sep='\t')
 sentences = train["Phrase"].values
 targets = (train['Sentiment'].values > 3)
 K = len(set(targets))

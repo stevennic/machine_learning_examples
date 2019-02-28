@@ -80,7 +80,7 @@ if __name__ == '__main__':
 
   # open an image
   # feel free to try your own
-  # path = '../large_files/caltech101/101_ObjectCategories/elephant/image_0002.jpg'
+  # path = '../../data/caltech101/101_ObjectCategories/elephant/image_0002.jpg'
   path = 'content/elephant.jpg'
   img = image.load_img(path)
 
